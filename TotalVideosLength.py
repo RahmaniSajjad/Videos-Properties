@@ -14,7 +14,7 @@ dir_files = input("Enter Dir : ")
 # Getting all videos and all videos properties in given path
 videos, videos_properties = vp.get_all_video_properties(dir_files)
 
-# keeping total videos length (second)
+# keeping total video's length (second)
 total_time = 0
 
 for i in range(len(videos)):
