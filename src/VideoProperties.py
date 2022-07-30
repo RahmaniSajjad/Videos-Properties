@@ -60,7 +60,7 @@ def convert_size(size):
 
     """
 
-    # initialize KB & MB & GB
+    # Defining KB & MB & GB
     K, M, G = 1024, 1024 ** 2, 1024 ** 3
 
     if size >= G:
