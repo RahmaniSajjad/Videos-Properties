@@ -6,7 +6,7 @@ Here is a python code that can give you all videos and all videos properties in 
 <br>
 I will use it to create some usefull code:yum:
 <br>
-- <a href= https://github.com/RahmaniSajjad/Videos-Properties/edit/main/README.md#total-videos-length>Total Videos Length</a>
+- <a href= https://github.com/RahmaniSajjad/Videos-Properties#total-videos-length>Total Videos Length</a>
 - *will complete soon (also you can complete it and send a pull request)*
 
 <br>
