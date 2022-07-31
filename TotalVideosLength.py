@@ -11,6 +11,9 @@ from src import VideoProperties as vp
 # Getting path from input
 dir_files = input("Enter Dir : ")
 
+# Setting file format that you want to calculate
+vp.valid_format = ["mp4", "mkv", "wmv"]
+
 # Getting all videos and all videos properties in given path
 videos, videos_properties = vp.get_all_video_properties(dir_files)
 

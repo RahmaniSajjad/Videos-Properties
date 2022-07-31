@@ -107,6 +107,10 @@ def get_all_video_properties(directory):
     videos = []
     videos_properties = []
 
+    # Return if valid_format list is empty
+    if len(valid_format) == 0:
+        return videos, videos_properties
+
     # Get all sub-folders in given directory
     all_directories = [folder_dir[0] for folder_dir in os.walk(directory)]
 
@@ -133,4 +137,4 @@ def get_all_video_properties(directory):
 
 
 # File format that you want to calculate
-valid_format = ["mp4", "mkv", "wmv"]
+valid_format = []
