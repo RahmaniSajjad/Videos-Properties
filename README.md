@@ -14,6 +14,11 @@ I will use it to create some usefull code:yum:
 <br>
 
 
+### Requestments
+- <tt>pip install opencv-python</tt>
+
+<br>
+
 ## Total Videos Length
 to see total videos length in a folder and its subfolders, do the following steps :
 - Run <tt>TotalVideosLength.py</tt> *<a href= https://github.com/RahmaniSajjad/Videos-Properties/blob/main/TotalVideosLength.py>(click to see code)</a>*
