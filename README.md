@@ -26,7 +26,7 @@ to see total videos length in a folder and its subfolders, do the following step
 
 <br>
 
-<img src="https://github.com/RahmaniSajjad/Videos-Properties/blob/ae0a6e903e5f2aca9500454f27477f7115f5dd9d/images/Total%20Videos%20Length.png?raw=true" align="center" alt="github.com/RahmaniSajjad/Videos-Properties" />
+<img src="https://github.com/RahmaniSajjad/Videos-Properties/blob/main/github-images/Total%20Videos%20Length.png" align="center" alt="github.com/RahmaniSajjad/Videos-Properties" />
 
 <br>
 
