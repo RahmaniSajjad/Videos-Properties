@@ -7,28 +7,46 @@ from src import VideoProperties as vp
 
 # <================================================================>
 
+videos, videos_properties = [], []
 
-# Getting path from input
-dir_files = input("Enter Dir : ")
+while True:
+    print("\n" + "-" * 50 + "\n")
 
-# Setting files formats that you want to calculate
-vp.valid_format = ["mp4", "mkv", "wmv"]
+    if len(videos) + len(videos_properties) != 0:
+        reset = input("Reset? (y for YES else for NO) ") == 'y'
+        if reset:
+            videos, videos_properties = [], []
 
-# Getting all videos and all videos properties in given path
-videos, videos_properties = vp.get_all_video_properties(dir_files)
+    # Getting path from input
+    dir_files = input("Enter Dir : ")
 
-# keeping total video's length (second)
-total_time = 0
+    is_deep = input("Is Deep? (y for YES else for NO) ") == 'y'
+    print()
 
-for i in range(len(videos)):
-    # Printing all videos with length
-    print(f"{i + 1}) {videos[i]}  :  {videos_properties[i]['length']}")
+    # Setting files formats that you want to calculate
+    vp.valid_format = ["mp4", "mkv", "wmv"]
 
-    # Adding video length to total videos length
-    total_time += videos_properties[i]['length_sec']
+    # Getting all videos and all videos properties in given path
+    result = vp.get_all_video_properties(dir_files, is_deep)
 
-# Printing number of videos in given directory
-print(f"\n--- Number of Movies : {len(videos)}")
+    # Loop in video's 'directory + name'
+    for i in range(len(result[0])):
+        if result[0][i] not in videos:
+            videos.append(result[0][i])
+            videos_properties.append(result[1][i])
 
-# Printing converted total videos length
-print(f"--- Total Time : {vp.convert_length(total_time)}")
+    # keeping total video's length (second)
+    total_time = 0
+
+    for i in range(len(videos)):
+        # Printing all videos with length
+        print(f"{i + 1}) {videos[i]}  :  {videos_properties[i]['length']}")
+
+        # Adding video length to total videos length
+        total_time += videos_properties[i]['length_sec']
+
+    # Printing number of videos in given directory
+    print(f"\n--- Number of Movies : {len(videos)}")
+
+    # Printing converted total videos length
+    print(f"--- Total Time : {vp.convert_length(total_time)}")

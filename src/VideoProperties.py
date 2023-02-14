@@ -91,11 +91,12 @@ def convert_length(length):
     return f"{int(h):02}:{int(m):02}:{int(s):02}"
 
 
-def get_all_video_properties(directory):
+def get_all_video_properties(directory, is_deep):
     """this function returns properties of all video in given directory
 
         Parameters:
         directory (string): given directory
+        is_deep (boolean): calculate sub-folder or not
 
         Returns:
         list, list: list of all video in given directory,
@@ -111,8 +112,11 @@ def get_all_video_properties(directory):
     if len(valid_format) == 0:
         return videos, videos_properties
 
-    # Get all sub-folders in given directory
-    all_directories = [folder_dir[0] for folder_dir in os.walk(directory)]
+    if is_deep:
+        # Get all sub-folders in given directory if is_deep
+        all_directories = [folder_dir[0] for folder_dir in os.walk(directory)]
+    else:
+        all_directories = [directory]
 
     for directory in all_directories:
         try:
