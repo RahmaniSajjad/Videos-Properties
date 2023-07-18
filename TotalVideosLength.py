@@ -24,7 +24,8 @@ while True:
     print()
 
     # Setting files formats that you want to calculate
-    vp.valid_format = ["mp4", "mkv", "wmv"]
+    vp.valid_format = ["mp4", "mkv", "wmv", "avi", "mov", "flv", "mpeg", "3gp", "webm", "ogv", "rmvb", "vob", "m4v", "ts", "divx"]
+
 
     # Getting all videos and all videos properties in given path
     result = vp.get_all_video_properties(dir_files, is_deep)
